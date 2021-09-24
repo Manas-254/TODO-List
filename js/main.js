@@ -42,7 +42,6 @@ function showtask(){
                     <th scope="row">${index+1}</th>
                     ${taskCompleteValue}
                     <td><button type="button" onclick="edittask(${index})" class="text-primary"><i class="fa fa-edit"></i>Edit</button></td>
-                    <td><button type="button" class="text-success" id=${index}><i class="fa fa-check-square-o"></i>Complete</button></td>
                     <td><button type="button" onclick="deleteitem(${index})" class="text-danger"><i class="fa fa-trash"></i>Delete</button></td>
                 </tr>`;
     });
@@ -93,20 +92,7 @@ function deleteitem(index){
     showtask();
 }
 
-//complete task
-/* function completetask(index){
-    let webtask = localStorage.getItem("localtask");
-    let taskObj = JSON.parse(webtask);
-    taskObj[index] = '<span style="text-decoration:line-through">' + taskObj[index] + '</span>';
-    let addedtasklist = document.getElementById("addedtasklist");
-    addedtasklist.addEventListener("click", function(e){
-        console.log(addedtasklist)
-    })
-    localStorage.setItem("localtask", JSON.stringify(taskObj));
-    showtask();
-} */
 
-// complete task
 let addedtasklist = document.getElementById("addedtasklist");
     addedtasklist.addEventListener("click", function(e){
        // console.log(e);
